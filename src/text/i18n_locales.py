@@ -1,5 +1,7 @@
 """Non-English UI strings for the Text vinyl tab."""
 
+from text.i18n_ja import TEXT_VINYL_JA
+
 TEXT_VINYL_ES = {
     "text_tab": "Texto",
     "text_tab_hint": "Escribe texto, elige una fuente y genera. Las vistas previas están a la derecha.",
@@ -928,4 +930,5 @@ TEXT_VINYL_BY_LANG = {
     "zh": TEXT_VINYL_ZH,
     "zh-tw": TEXT_VINYL_ZH_TW,
     "ko": TEXT_VINYL_KO,
+    "ja": TEXT_VINYL_JA,
 }

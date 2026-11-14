@@ -81,7 +81,9 @@ LANGUAGES = {
     "中文 (繁體)": "zh-tw",
     "한국어": "ko",
     "Español": "es",
+    "日本語": "ja",
 }
+DEFAULT_LANGUAGE = "日本語"
 
 ETA_MAX_PROGRESS_SAMPLES = 400
 ETA_WINDOW_SECONDS = 45.0
@@ -851,7 +853,7 @@ class App:
         self.root.geometry("1420x900")
         self.root.minsize(1180, 780)
         self.root.configure(bg=Theme.BG)
-        self.lang = "en"
+        self.lang = LANGUAGES[DEFAULT_LANGUAGE]
         self.queue = queue.Queue()
         self.shutdown_event = threading.Event()
         self.active_processes = set()
@@ -950,7 +952,7 @@ class App:
         self.region_poly_points: list[float] = []
         self.region_current_output_dir: str = ""
         self.region_workflow_running = False
-        self.region_status = StringVar(value="Ready")
+        self.region_status = StringVar(value=tr(self.lang, "ready"))
         self.region_progress = StringVar(value="")
         self.themes = TextVinylThemeAdapter()
         self.text_vinyl = TextVinylWorkspace(self)
@@ -1296,7 +1298,7 @@ class App:
         self.update_indicator.pack(side=RIGHT, padx=(8, 0))
         self.update_indicator.bind("<Button-1>", self.show_update_status)
         self.lang_combo = ttk.Combobox(title_row, values=list(LANGUAGES.keys()), state="readonly", width=10)
-        self.lang_combo.set("English")
+        self.lang_combo.set(DEFAULT_LANGUAGE)
         self.lang_combo.pack(side=RIGHT)
         self.lang_combo.bind("<<ComboboxSelected>>", self._on_language)
         self._label(title_row, "language").pack(side=RIGHT, padx=(0, 6))
@@ -3969,7 +3971,7 @@ class App:
         seconds = max(0, int(round(seconds)))
         hours, remainder = divmod(seconds, 3600)
         minutes, seconds = divmod(remainder, 60)
-        suffix = {"zh": "剩余", "zh-tw": "剩餘", "ko": "남음"}.get(self.lang, "left")
+        suffix = {"zh": "剩余", "zh-tw": "剩餘", "ko": "남음", "ja": "残り"}.get(self.lang, "left")
         if hours:
             return f"{hours}h {minutes:02d}m {suffix}"
         if minutes:

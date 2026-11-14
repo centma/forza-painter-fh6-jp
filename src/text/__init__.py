@@ -9,6 +9,7 @@ __all__ = [
     "forza_fonts",
     "geometry",
     "i18n_en",
+    "i18n_ja",
     "i18n_locales",
     "import_template",
     "layer_masks",

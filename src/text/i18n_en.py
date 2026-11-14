@@ -111,6 +111,7 @@ TEXT_VINYL_EN = {
     "text_layer_estimate_bars_skeleton": " Rotated bars (skeleton).",
     "text_layer_estimate_extra_shapes": " Extra shapes mode.",
     "text_layer_estimate_error": "Could not estimate layers: {error}",
+    "text_layer_estimate_idle": "Enter text to estimate the layer count.",
     "text_extra_shapes": "Enable extra shapes (smoother curves)",
     "text_trace_method_grid": "Grid",
     "text_trace_method_bars_full": "Rotated bars (full fill)",

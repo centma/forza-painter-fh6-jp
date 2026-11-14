@@ -1481,6 +1481,11 @@ TYPECODE_TEXT = {
 for _lang, _items in TYPECODE_TEXT.items():
     TEXT.setdefault(_lang, {}).update(_items)
 
+# Japanese lives in its own module to keep this fork's diff isolated
+from i18n_ja import TEXT_JA
+
+TEXT.setdefault("ja", {}).update(TEXT_JA)
+
 from text.i18n_en import TEXT_VINYL_EN
 from text.i18n_locales import TEXT_VINYL_BY_LANG
 
