@@ -20,3 +20,11 @@ build/
 *memory-count-*.jsonl
 *candidates.json
 guided-memory-*.jsonl
+
+# 作業用
+_works/
+
+# for AI
+AGENTS.md
+CLAUDE.md
+.claude/
