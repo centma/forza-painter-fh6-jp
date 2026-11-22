@@ -54,5 +54,8 @@
 - `src/i18n_ja.py`: 派生元の英語文字列の変更に追従 (追加 7、変更 2、削除 2)。キー数 389 で en と一致。
 - `README.ja-JP.md`: v1.9.7 に追従 (バージョン、出力先 `out/`・`image/`、変更履歴)。
 
+- レビュー対応: `tests/test_ui_languages.py` で `LANGUAGES` と `SUPPORTED_UI_LANGUAGES` の一致を検証。`ui_preferences.py` のコメントを日本語フォールバックに修正。`checkpoint_manual_hint` の訳を条件付きの表現に修正。
+
 ### 懸念点
-- 派生元が今後 `SUPPORTED_UI_LANGUAGES` や `LANGUAGES` を変更すると、同様の衝突・取りこぼしが起きる。
+- 派生元が今後 `SUPPORTED_UI_LANGUAGES` や `LANGUAGES` を変更すると衝突は起こりうる。取りこぼしは上記テストで検出する。
+- v1.9.7 以前に英語を選んで保存した利用者は英語のまま起動する (仕様どおり)。

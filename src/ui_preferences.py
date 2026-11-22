@@ -11,7 +11,7 @@ from app_paths import ROOT
 PREFERENCES_PATH = ROOT / "runtime" / "settings" / "ui_preferences.json"
 
 # Must match the values of the LANGUAGES mapping in app.py. Empty string
-# means "never chosen" and the app falls back to English.
+# means "never chosen" and the app falls back to Japanese.
 SUPPORTED_UI_LANGUAGES = ("en", "pt-br", "zh", "zh-tw", "ko", "es", "ja")
 
 

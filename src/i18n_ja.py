@@ -115,7 +115,7 @@ TEXT_JA = {
     "generation_stopped": "生成を停止しました。",
     "generator_recycled_layers": "{max_layer}/{total} の時点で完全に覆われたレイヤーを再利用しました。処理を続行します。これは正常な動作で、最初からやり直しではありません。",
     "existing_final_json_found": "{image} の既存の最終 JSON が見つかりました。インポートに追加しました。",
-    "checkpoint_manual_hint": "生成が失敗または停止しました。保存済みのチェックポイント JSON はディスクに残っています。手動でインポートするには「JSON を追加」を使ってください。",
+    "checkpoint_manual_hint": "生成が失敗または停止しました。保存済みのチェックポイント JSON があれば、ディスクに残っています。手動でインポートするには「JSON を追加」を使ってください。",
     "imported_presets": "プリセットファイルを {count} 個読み込みました。",
     "saved_preset": "プリセットを保存しました: {path}",
     "no_image_selected": "画像が選択されていません。",
