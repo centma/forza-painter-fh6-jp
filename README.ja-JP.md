@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <code>v1.9.6</code> · <code>Windows</code> · <code>Forza Horizon 6</code> · <code>GPU/OpenCL</code> · <code>単体 EXE</code>
+  <code>v1.9.7</code> · <code>Windows</code> · <code>Forza Horizon 6</code> · <code>GPU/OpenCL</code> · <code>単体 EXE</code>
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 
 PNG/JPG/BMP 画像を Forza Horizon 6 のバイナルグループのレイヤーに変換します。生成・プレビュー・インポートを 1 つのデスクトップアプリで行えます。通常の利用では Python、`.venv`、バッチファイル、メモリアドレスの手入力は不要です。
 
-> **EXE のダウンロード:** [Releases](https://github.com/bvzrays/forza-painter-fh6/releases) から `forza-painter-fh6-v1.9.6.exe` を入手し、そのまま実行します。
+> **EXE のダウンロード:** [Releases](https://github.com/bvzrays/forza-painter-fh6/releases) から `forza-painter-fh6-v1.9.7.exe` を入手し、そのまま実行します。
 
 > **プリセットマーケット:** https://painter6.com またはアプリ内のマーケットバナーから、共有された画像・プリセット・JSON パッケージを閲覧できます。
 
@@ -50,7 +50,7 @@ PNG/JPG/BMP 画像を Forza Horizon 6 のバイナルグループのレイヤー
 
 ## クイックスタート
 
-1. [Releases](https://github.com/bvzrays/forza-painter-fh6/releases) から `forza-painter-fh6-v1.9.6.exe` をダウンロードします。
+1. [Releases](https://github.com/bvzrays/forza-painter-fh6/releases) から `forza-painter-fh6-v1.9.7.exe` をダウンロードします。
 2. EXE を書き込み可能な通常のフォルダー (例: `Desktop\forza-painter-fh6`) に置きます。
 3. EXE をダブルクリックします。FH6 へのインポート時に Windows がプロセスへのアクセスをブロックする場合は、管理者として実行してください。
 4. FH6 で `バイナルグループの作成` / バイナルグループエディターを開き、球体テンプレートを読み込んで `グループ解除` します。
@@ -94,7 +94,7 @@ PNG/JPG/BMP 画像を Forza Horizon 6 のバイナルグループのレイヤー
 7. 下部に固定された `現在の設定で生成` ボタンをクリックします。
 8. プレビューとログが更新されるのを待ちます。
 
-生成されたファイルは元画像と同じフォルダーに `image.500.json`、`image.1000.json`、`image.3000.json` のように保存されます。
+生成した JSON とチェックポイントは、アプリと同じ場所の `out/<画像名>/<拡張子>/` に保存されます。生成に使った元画像は `image/<拡張子>/` にバックアップされます。例えば `logo.png` の出力は `out/logo/png/`、`logo.jpg` の出力は `out/logo/jpg/` に保存されます。
 
 1 枚の画像から複数のチェックポイント JSON が生成されます。テンプレートに合う最もレイヤー数の多い JSON を使ってください。例えば 3000 レイヤーのテンプレートには `image.3000.json` または最終の `image.json` を使います。3000 レイヤーのテンプレートに 500 レイヤーの JSON をインポートすると、ぼやけた結果になります。
 
@@ -200,6 +200,11 @@ EXE と同じ場所に作成されるフォルダー:
 ## 変更履歴
 
 ここにはバージョン付きのリリース項目のみを記載しています。アプリのアップデート通知に表示される変更履歴は [CHANGELOG.md](CHANGELOG.md) を参照してください。
+
+### v1.9.7 / 2026-11-16
+
+- 生成した JSON を `out/` 以下に画像名と拡張子ごとに整理し、元画像を `image/` 以下にバックアップするようにしました。最終 JSON の自動選択を正確にしました。
+- 同名の出力の衝突を防ぎ、前処理のキャッシュファイルを分離し、BMP の重複チェックを追加し、選択した UI 言語を記憶するようにし、一覧にスクロールバーを追加しました。
 
 ### v1.9.2 / 2026-06-21
 
